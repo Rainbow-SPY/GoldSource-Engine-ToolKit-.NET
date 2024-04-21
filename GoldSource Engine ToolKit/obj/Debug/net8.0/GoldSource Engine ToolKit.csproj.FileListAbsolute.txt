@@ -1,0 +1,14 @@
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\Debug\net8.0\GoldSource Engine ToolKit.exe
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\Debug\net8.0\GoldSource Engine ToolKit.deps.json
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\Debug\net8.0\GoldSource Engine ToolKit.runtimeconfig.json
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\Debug\net8.0\GoldSource Engine ToolKit.dll
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\Debug\net8.0\GoldSource Engine ToolKit.pdb
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\Debug\net8.0\GoldSource Engine ToolKit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\Debug\net8.0\GoldSource Engine ToolKit.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\Debug\net8.0\GoldSource Engine ToolKit.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\Debug\net8.0\GoldSource Engine ToolKit.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\Debug\net8.0\GoldSource Engine ToolKit.dll
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\Debug\net8.0\refint\GoldSource Engine ToolKit.dll
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\Debug\net8.0\GoldSource Engine ToolKit.pdb
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\Debug\net8.0\GoldSource Engine ToolKit.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\Debug\net8.0\ref\GoldSource Engine ToolKit.dll
