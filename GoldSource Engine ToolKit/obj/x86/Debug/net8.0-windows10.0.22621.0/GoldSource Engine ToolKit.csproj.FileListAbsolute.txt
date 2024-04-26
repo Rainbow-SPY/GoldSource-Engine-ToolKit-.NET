@@ -1,0 +1,18 @@
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.exe
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.deps.json
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.runtimeconfig.json
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.dll
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.pdb
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\x86\Debug\net8.0-windows10.0.22621.0\Microsoft.Windows.SDK.NET.dll
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\bin\x86\Debug\net8.0-windows10.0.22621.0\WinRT.Runtime.dll
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.AssemblyInfoInputs.cache
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.AssemblyInfo.cs
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.csproj.CoreCompileInputs.cache
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.sourcelink.json
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\x86\Debug\net8.0-windows10.0.22621.0\GoldSour.01170E07.Up2Date
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.dll
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\x86\Debug\net8.0-windows10.0.22621.0\refint\GoldSource Engine ToolKit.dll
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.pdb
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\x86\Debug\net8.0-windows10.0.22621.0\GoldSource Engine ToolKit.genruntimeconfig.cache
+D:\C#\GoldSource Engine ToolKit\GoldSource Engine ToolKit\obj\x86\Debug\net8.0-windows10.0.22621.0\ref\GoldSource Engine ToolKit.dll

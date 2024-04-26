@@ -1,7 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// See https://github.com/Rainbow-SPY/GoldSource-Engine-ToolKit-.NET for more information
 // Develper Says:
+// This is a C# (csharp) console application written by .NET 8.0.
 // 
-// What the fxxk!
+// This project need .NET Framework 8.0
 using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 using System;
@@ -158,9 +159,9 @@ Console.Write(" 此 GE 工具箱按");
 Console.ForegroundColor= ConsoleColor.Red;
 Console.Write("\"开发者提供的原样\"");
 Console.ResetColor();
-Console.WriteLine("提供，并且不作任何明示或暗示性的保证.在任何");
-Console.WriteLine("情况之下，作者均不会对因为使用此脚本配置工具而导致可能的任何破坏承担责任.");
-Console.WriteLine("此软件不用于任何商业行为，出现任何法律问题将有使用者承担。");
+Console.WriteLine(" 提供，并且不作任何明示或暗示性的保证.在任何");
+Console.WriteLine(" 情况之下，作者均不会对因为使用此脚本配置工具而导致可能的任何破坏承担责任.");
+Console.WriteLine(" 此软件不用于任何商业行为，出现任何法律问题将有使用者承担。");
 Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine(" GE 工具箱将会使用各类第三方工具来完成其中的一部分任务行为。");
@@ -171,24 +172,22 @@ Console. ForegroundColor = ConsoleColor.Green;
 Console.WriteLine(" (C) Microsoft Corporation. All rights reserved.");
 Console.WriteLine(" 7-Zip Copyright (C) 1999-2018 Igor Pavlov.");
 Console.WriteLine(" Copyright (C) 2021 Valve Corporation");
+Console.ResetColor();
 Console.WriteLine("===============================================================================");
 Console.WriteLine("########################[ 按‘A’同意 / 按‘R’拒绝 ]#########################");
 KeyJump:
 ConsoleKeyInfo keyInfo = Console.ReadKey(intercept:true);
-if (keyInfo.KeyChar == 'a' )//|| keyInfo.KeyChar == 'a')
+if (keyInfo.KeyChar == 'r' )//|| keyInfo.KeyChar == 'a')
 {
-    Console.WriteLine("A");
+    Environment.Exit(0);
 }
 else
 {
-    if (keyInfo.KeyChar == 'r')// || keyInfo.KeyChar == 'b')
+    if (keyInfo.KeyChar == 'a')
     {
-        Console.WriteLine("r");
+        goto Instruction;
     }
-    else
-    {
-        goto KeyJump;
-    }
+    goto KeyJump;
 }
 Instruction:
 Console.Title = "Instruction - GoldSource Engine ToolKit .NET ver 1.0 ";
@@ -225,7 +224,7 @@ Console.WriteLine(" 工具箱会读取Counter-Strike的相关数据, 在必要�
 Console.WriteLine();
 Console.WriteLine("===============================================================================");
 Console.WriteLine("############################[ 10 秒后关闭界面... ]#############################");
-//Thread.Sleep(10000);
+//Thread.Sleep(10000);//Wait 10 second
 Console.ReadKey();
 ComputerInfo:
 Console.Clear();

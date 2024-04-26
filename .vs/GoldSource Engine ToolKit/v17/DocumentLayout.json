@@ -21,7 +21,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,10 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -66,7 +62,7 @@
               "RelativeDocumentMoniker": "GoldSource Engine ToolKit\\Program.cs",
               "ToolTip": "D:\\C#\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit\\Program.cs",
               "RelativeToolTip": "GoldSource Engine ToolKit\\Program.cs",
-              "ViewState": "AQIAAOgAAAAAAAAAAAAqwAIBAAA6AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T13:51:03.114Z",
               "EditorCaption": ""
