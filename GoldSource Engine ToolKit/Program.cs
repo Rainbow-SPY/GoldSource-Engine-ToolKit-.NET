@@ -2,7 +2,8 @@
 // Develper Says:
 // This is a C# (csharp) console application written by .NET 8.0.
 // 
-// This project need .NET Framework 8.0
+// This project need .NET Runtime 8.0.4
+//
 using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 using System;
