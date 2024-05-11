@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "D:\\C#\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit.csproj",
-        "projectName": "GoldSource Engine ToolKit",
+        "projectName": "ToolKit.Core.App",
         "projectPath": "D:\\C#\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "D:\\C#\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit\\obj\\",
@@ -44,6 +44,20 @@
       "frameworks": {
         "net8.0-windows10.0.22621": {
           "targetAlias": "net8.0-windows10.0.22621.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Net.NetworkInformation": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

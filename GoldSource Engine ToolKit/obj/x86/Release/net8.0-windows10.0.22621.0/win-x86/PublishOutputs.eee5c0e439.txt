@@ -1,0 +1,2 @@
+D:\Gold Source Engine ToolKit x64 zh-CN\Release\ToolKit.Core.App.pdb
+D:\Gold Source Engine ToolKit x64 zh-CN\Release\ToolKit.Core.App.exe

@@ -1,0 +1,12 @@
+D:\Gold Source Engine ToolKit x64 zh-CN\GoldSource Engine ToolKit.exe
+D:\Gold Source Engine ToolKit x64 zh-CN\GoldSource Engine ToolKit.dll
+D:\Gold Source Engine ToolKit x64 zh-CN\GoldSource Engine ToolKit.deps.json
+D:\Gold Source Engine ToolKit x64 zh-CN\GoldSource Engine ToolKit.runtimeconfig.json
+D:\Gold Source Engine ToolKit x64 zh-CN\GoldSource Engine ToolKit.pdb
+D:\Gold Source Engine ToolKit x64 zh-CN\Microsoft.Windows.SDK.NET.dll
+D:\Gold Source Engine ToolKit x64 zh-CN\WinRT.Runtime.dll
+D:\Gold Source Engine ToolKit x64 zh-CN\Newtonsoft.Json.dll
+D:\Gold Source Engine ToolKit x64 zh-CN\System.Configuration.ConfigurationManager.dll
+D:\Gold Source Engine ToolKit x64 zh-CN\System.Diagnostics.EventLog.Messages.dll
+D:\Gold Source Engine ToolKit x64 zh-CN\System.Diagnostics.EventLog.dll
+D:\Gold Source Engine ToolKit x64 zh-CN\System.Security.Cryptography.ProtectedData.dll

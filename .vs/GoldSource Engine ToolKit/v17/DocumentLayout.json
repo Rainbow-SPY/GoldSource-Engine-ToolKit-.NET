@@ -3,15 +3,16 @@
   "WorkspaceRootPath": "D:\\C#\\GoldSource Engine ToolKit\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D303BA3-9E5C-4E05-B5F9-7F5142511A26}|GoldSource Engine ToolKit\\GoldSource Engine ToolKit.csproj|d:\\c#\\goldsource engine toolkit\\goldsource engine toolkit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D303BA3-9E5C-4E05-B5F9-7F5142511A26}|GoldSource Engine ToolKit\\GoldSource Engine ToolKit.csproj|solutionrelative:goldsource engine toolkit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D303BA3-9E5C-4E05-B5F9-7F5142511A26}|GoldSource Engine ToolKit\\ToolKit.Core.App.csproj|d:\\c#\\goldsource engine toolkit\\goldsource engine toolkit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D303BA3-9E5C-4E05-B5F9-7F5142511A26}|GoldSource Engine ToolKit\\ToolKit.Core.App.csproj|solutionrelative:goldsource engine toolkit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D303BA3-9E5C-4E05-B5F9-7F5142511A26}|GoldSource Engine ToolKit\\GoldSource Engine ToolKit.csproj|d:\\c#\\goldsource engine toolkit\\goldsource engine toolkit\\goldsource engine toolkit.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{8D303BA3-9E5C-4E05-B5F9-7F5142511A26}|GoldSource Engine ToolKit\\GoldSource Engine ToolKit.csproj|solutionrelative:goldsource engine toolkit\\goldsource engine toolkit.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{8D303BA3-9E5C-4E05-B5F9-7F5142511A26}|GoldSource Engine ToolKit\\ToolKit.Core.App.csproj|d:\\c#\\goldsource engine toolkit\\goldsource engine toolkit\\toolkit.core.app.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{8D303BA3-9E5C-4E05-B5F9-7F5142511A26}|GoldSource Engine ToolKit\\ToolKit.Core.App.csproj|solutionrelative:goldsource engine toolkit\\toolkit.core.app.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D303BA3-9E5C-4E05-B5F9-7F5142511A26}|GoldSource Engine ToolKit\\GoldSource Engine ToolKit.csproj|d:\\gold source engine toolkit\\x64-bit_zh-cn\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+      "AbsoluteMoniker": "D:0:0:{8D303BA3-9E5C-4E05-B5F9-7F5142511A26}|GoldSource Engine ToolKit\\ToolKit.Core.App.csproj|d:\\c#\\goldsource engine toolkit\\goldsource engine toolkit\\toolkit.core.app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8D303BA3-9E5C-4E05-B5F9-7F5142511A26}|GoldSource Engine ToolKit\\ToolKit.Core.App.csproj|solutionrelative:goldsource engine toolkit\\toolkit.core.app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,26 +34,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "README.md",
-              "DocumentMoniker": "D:\\Gold Source Engine ToolKit\\x64-bit_zh-CN\\README.md",
-              "RelativeDocumentMoniker": "..\\..\\Gold Source Engine ToolKit\\x64-bit_zh-CN\\README.md",
-              "ToolTip": "D:\\Gold Source Engine ToolKit\\x64-bit_zh-CN\\README.md",
-              "RelativeToolTip": "..\\..\\Gold Source Engine ToolKit\\x64-bit_zh-CN\\README.md",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2024-04-20T20:09:14.33Z"
+              "DocumentIndex": 1,
+              "Title": "ToolKit.Core.App",
+              "DocumentMoniker": "D:\\C#\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit\\ToolKit.Core.App.csproj",
+              "RelativeDocumentMoniker": "GoldSource Engine ToolKit\\ToolKit.Core.App.csproj",
+              "ToolTip": "D:\\C#\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit\\ToolKit.Core.App.csproj",
+              "RelativeToolTip": "GoldSource Engine ToolKit\\ToolKit.Core.App.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-11T05:41:46.878Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GoldSource Engine ToolKit",
-              "DocumentMoniker": "D:\\C#\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit.csproj",
-              "RelativeDocumentMoniker": "GoldSource Engine ToolKit\\GoldSource Engine ToolKit.csproj",
-              "ToolTip": "D:\\C#\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit.csproj",
-              "RelativeToolTip": "GoldSource Engine ToolKit\\GoldSource Engine ToolKit.csproj",
+              "DocumentIndex": 2,
+              "Title": "ToolKit.Core.App.csproj",
+              "DocumentMoniker": "D:\\C#\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit\\ToolKit.Core.App.csproj",
+              "RelativeDocumentMoniker": "GoldSource Engine ToolKit\\ToolKit.Core.App.csproj",
+              "ToolTip": "D:\\C#\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit\\ToolKit.Core.App.csproj",
+              "RelativeToolTip": "GoldSource Engine ToolKit\\ToolKit.Core.App.csproj",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-20T14:07:01.759Z"
+              "WhenOpened": "2024-05-11T05:30:15.187Z"
             },
             {
               "$type": "Document",
@@ -62,9 +64,9 @@
               "RelativeDocumentMoniker": "GoldSource Engine ToolKit\\Program.cs",
               "ToolTip": "D:\\C#\\GoldSource Engine ToolKit\\GoldSource Engine ToolKit\\Program.cs",
               "RelativeToolTip": "GoldSource Engine ToolKit\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAnAAAA",
+              "ViewState": "AQIAAPYAAAAAAAAAAAAUwBsBAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T13:51:03.114Z",
+              "WhenOpened": "2024-05-11T05:25:12.387Z",
               "EditorCaption": ""
             }
           ]
