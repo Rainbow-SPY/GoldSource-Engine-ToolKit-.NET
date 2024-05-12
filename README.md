@@ -2,31 +2,15 @@
 
 ### 目录
 1. [GE工具箱简介](./README.md#简介)
-2. [支持的功能](./README.md#%E6%94%AF%E6%8C%81%E7%9A%84%E5%8A%9F%E8%83%BD)
-3. [下载](./README.md#下载)
-4. [联系我们](./README.md#联系我们)
-5. [支持的游戏](./README.md#支持的游戏)
-6. [用户最终许可协议](./README.md#用户最终许可协议)
-7. [版权声明](./README.md#版权声明)
+2. [下载](./README.md#下载)
+3. [联系我们](./README.md#联系我们)
+4. [支持的游戏](./README.md#支持的游戏)
+5. [用户最终许可协议](./README.md#用户最终许可协议)
+6. [版权声明](./README.md#版权声明)
 
 ## 简介
 
-   GE工具箱 , 主要服务于Valve公司于1998年研发的金源引擎 (GoldSource Engine) , 目前版本 (2.1.0) 支持半衰期 (Half-Life) , 反恐精英 (Counter-Strike) 
-
-## 支持的功能
-> 反恐精英(Counter-Strike)
-- 支持自定义键位
-- 支持汉化游戏
-- 支持中英语音切换(均为官方语音)
-- 支持更换模型(Counter-Strike 1.6 --> Counter-Strike:Global Offiensive)
-- 支持更换主菜单背景(Counter-Strike 1.6 --> Counter-Strike 2)
-- Steam正版和互联网复制版均可游玩
-> 半衰期(Half-Life)
-- 支持汉化游戏
-- 支持中英语音切换(均为官方语音)
-- 支持更换模型(Offical Origin Model --> Offical New Model)
-- Steam正版和互联网复制版均可游玩
-> *暂不支持零点行动版本*
+   GE工具箱 , 主要服务于Valve公司于1998年研发的金源引擎 (GoldSource Engine) , 目前版本 (1.1.0)
 ## 下载
 
 >**Github国外镜像源**
@@ -39,30 +23,30 @@
 ## 联系我们
 
 <!--
-- <img src="./Icon/kuaishou.svg" width="20" height="20"/>在 [快手](https://www.kuaishou.com/profile/3xhz6imp3u8us3i) 观看我们的视频
+- <img src="https://github.com/Rainbow-SPY/GoldSource-Engine-ToolKit/raw/master/Icon/kuaishou.svg" width="20" height="20"/>在 [快手](https://www.kuaishou.com/profile/3xhz6imp3u8us3i) 观看我们的视频
 -->
 
-- <img src="./Icon/bilibili.svg" width="20" height="20"/>在 [Bilibili](https://space.bilibili.com/2048173282) 观看我们的视频
+- <img src="https://raw.kkgithub.com/Rainbow-SPY/GoldSource-Engine-ToolKit/master/Icon/bilibili.svg" width="20" height="20"/>在 [Bilibili](https://space.bilibili.com/2048173282) 观看我们的视频
 
-- <img src="./Icon/github.svg" width="20" height="20"/>在 [Github](https://github.com/Rainbow-SPY/Counter-Strike-steam-Fix) 上联系我们
+- <img src="https://raw.kkgithub.com/Rainbow-SPY/GoldSource-Engine-ToolKit/master/Icon/github.svg" width="20" height="20"/>在 [Github](https://github.com/Rainbow-SPY/Counter-Strike-steam-Fix) 上联系我们
 
-- <img src="./Icon/tencentqq.svg" width="20" height="20"/>加入 [QQ群](https://h5.qun.qq.com/s/MKjjF3Hf6m) 联系我们
+- <img src="https://raw.kkgithub.com/Rainbow-SPY/GoldSource-Engine-ToolKit/master/Icon/tencentqq.svg" width="20" height="20"/>加入 [QQ群](https://h5.qun.qq.com/s/MKjjF3Hf6m) 联系我们
 
 
 
 ## 支持的游戏
 
-<img src="./Icon/steam-2.svg" width="20" height="20">在Steam上购买Counter-Strike
+<img src="https://raw.kkgithub.com/Rainbow-SPY/GoldSource-Engine-ToolKit/master/Icon/steam-2.svg" width="20" height="20">在Steam上购买Counter-Strike
 <div align="center">
   
--[![counter-strike](./Icon/7fbb8f020914c70046ce6f8bb98cd415.png)](https://store.steampowered.com/widget/10/)
+[![counter-strike](https://raw.kkgithub.com/Rainbow-SPY/GoldSource-Engine-ToolKit/master/Icon/7fbb8f020914c70046ce6f8bb98cd415.png)](https://store.steampowered.com/widget/10/)
   
 </div>
 
-<img src="./Icon/steam-2.svg" width="20" height="20">在Steam上购买Half-Life
+<img src="https://raw.kkgithub.com/Rainbow-SPY/GoldSource-Engine-ToolKit/master/Icon/steam-2.svg" width="20" height="20">在Steam上购买Half-Life
 <div align="center">
 
--[![counter-strike](./Icon/768ddf078be6bdb32f01f5145fe0ef71.png)](https://store.steampowered.com/widget/70/)
+[![counter-strike](https://raw.kkgithub.com/Rainbow-SPY/GoldSource-Engine-ToolKit/master/Icon/768ddf078be6bdb32f01f5145fe0ef71.png)](https://store.steampowered.com/widget/70/)
   
 </div>
 
@@ -96,32 +80,15 @@ Copyright (C) Rainbow SPY Technology(2019-2024). All rights reserved.
 
 </div>
 
-- 主程序(ToolKit.Application.goldengine.bat)
-- 服务程序(ToolKit.Application.service.goldengine.bat)
-- 错误报告程序x28(ToolKit.crashreportor.*.exe)
+- 主程序(ToolKit.Core.App.exe)
+- 服务程序(ToolKit.Core.Helper.exe)
+- 启动器(ToolKit.Core.Launcher.exe)
 
 <div align="center">
 
 #### 第三方应用程序
 
 </div>
-
-
-
->  **Microsoft**
-
-Microsoft , Windows , Windows 10操作系统及其图标 (Logo) 等商标为美国Microsoft公司所有
- 
- **所属应用程序组件**
-- 向用户提供选项 (choice.exe 及其 mui)
-- 查找字符串 (grep) 实用程序 (reg.exe 及其 mui)
-- Microsoft (R) HTML 应用程序主机 (mshta.exe 及其 mui)
-- 注册表控制台工具 (reg.exe 及其 mui)
-- 列出当前运行的任务 (tasklist.exe 及其 mui)
-
-(C) Microsoft Corporation. All rights reserved.
-
-
 
 
 
@@ -135,11 +102,6 @@ Microsoft , Windows , Windows 10操作系统及其图标 (Logo) 等商标为美�
 7-Zip 版权所有 (C) 1999-2018 Igor Pavlov。
 
  详见[7-zip版权声明](./License/7zip.txt)
-
-
-
-
-
 
 > **Valve**
 
