@@ -8,29 +8,9 @@
 //   Version : 1.0.0 For .NET 8.0
 //  
 //   Publisher : Rainbow-SPY , All rights reserved.
-using System.ComponentModel.Design;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
-using System;
-using System.Globalization;
-using System.Diagnostics;
-using System.Security.Cryptography;
-using System.Reflection.Emit;
-using System.ComponentModel;
-using System.Drawing;
-using Windows.ApplicationModel.Background;
 using Microsoft.Win32;
-using System.Xml.Linq;
-using System.Configuration;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Reflection;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Runtime.Serialization.Json;
-using Newtonsoft.Json;
+using System.Diagnostics;
+using Tool.Extra;
 
 string Command_Game;
 string CstrikeCommand_1;
@@ -83,54 +63,44 @@ string ToolKit_App;//初始化赋值
 string ToolKit_Data;
 string ToolKit_Download;
 string ToolKit_resource;
+var ApplicationName = Process.GetCurrentProcess().ProcessName;
+string ToolKit_Application = Directory.GetCurrentDirectory() + "\\" + ApplicationName + ".exe";
+Console.Title = "Initialization... - GoldSource Engine ToolKit .NET ver 1.0";//设置窗口标题
+ToolKit_App = Directory.GetCurrentDirectory();//直接获取运行目录
 
+ToolKit_App = ToolKit_App.Replace("\\", "/");//example: C:/Folder/
+ToolKit_Application = ToolKit_Application.Replace("\\", "/"); // example: C:/Folder/Application.exe
 
-if (Directory.Exists("D:/"))//检测是否有D盘
-{
-    ToolKit_App = "D:/Gold Source Engine ToolKit x64 zh-CN";//设置工作路径
     ToolKit_Download = ToolKit_App + "/Download";//下载目录
     ToolKit_resource = ToolKit_App + "/resource";//引用的资源目录
     ToolKit_Data = ToolKit_App + "/data";//数据目录
-    if (Directory.Exists(ToolKit_App))//检测工作路径是否有
+//ToolKit.modules
+var aria2c = ToolKit_App + "/modules/aria2/aria2c.exe";
+var ExtractZip = ToolKit_App + "/modules/7-zip/7za.exe";
+var NSudoLC= ToolKit_App + "/modules/NSudo/NSudoLC.exe";
+if (File.Exists(ToolKit_App + "/ToolKit.Core.Launcher.exe"))
     {
-        if (!Directory.Exists(ToolKit_Data))
+    if (args.Length > 0 && args[0] == "-Launcher")//args[0] == "{anything}"
         {
-
+        // Command
         }
         else
         {
-            Directory.CreateDirectory(ToolKit_Data);
+        Console.WriteLine("未使用启动器启动工具箱,请重新启动!");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("按任意键退出...");
+        Console.ReadKey();
+        Environment.Exit(0);
         }
     }
-    else//反之
-    {
-        Directory.CreateDirectory(ToolKit_App);//创建工作目录
-        if (!Directory.Exists(ToolKit_Data))
-        {
-
-        }
         else
         {
-            Directory.CreateDirectory(ToolKit_Data);
+    Console.WriteLine("应用程序安装不完整,请检查文件完整性.");
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("按任意键退出...");
+    Console.ReadKey();
+    Environment.Exit(0);
         }
-
-    }
-}
-else//反之
-{
-    ToolKit_App = "C:/Gold Source Engine ToolKit x64 zh-CN";//不需要string和var,直接赋值
-    ToolKit_resource =  ToolKit_App + "/resource";
-    ToolKit_Download = ToolKit_App + "/Download";
-    ToolKit_Data = ToolKit_App + "/data";
-    if (Directory.Exists(ToolKit_App))
-    {
-
-    }
-    else
-    {
-        Directory.CreateDirectory(ToolKit_App);
-    }
-
     if (!Directory.Exists(ToolKit_Data))
     {
 
@@ -139,8 +109,6 @@ else//反之
     {
         Directory.CreateDirectory(ToolKit_Data);
     }
-}
-
 Console.SetWindowSize(80, 25);
 Console.SetBufferSize(80,25);
 Console.Title = "Welcome! - GoldSource Engine ToolKit .NET ver 1.0";//设置窗口标题
@@ -227,7 +195,7 @@ Console.WriteLine(" 7-Zip Copyright (C) 1999-2018 Igor Pavlov.");
 Console.WriteLine(" Copyright (C) 2021 Valve Corporation");
 Console.ResetColor();
 Console.WriteLine("===============================================================================");
-Console.WriteLine("########################[ 按‘A’同意 / 按‘R’拒绝 ]#########################");
+Console.WriteLine("########################[ 按‘A’同意 / 按‘R’退出 ]#########################");
 KeyJump:
 ConsoleKeyInfo keyInfo = Console.ReadKey(intercept: true);
 if (keyInfo.KeyChar == 'r')
@@ -252,9 +220,9 @@ Console.WriteLine();
 Console.WriteLine("正在检查更新...");
 Console.WriteLine();
 string T_Download = "\"" + ToolKit_Download + "\"";
-Process check = Process.Start(@ToolKit_App + "/modules/aria2/aria2c.exe ","-x 16 -d " + T_Download + " " + "-q" + " " + "https://github.moeyy.xyz/https://raw.githubusercontent.com/Rainbow-SPY/GoldSource-Engine-ToolKit/resource/Version.ini");
+Process check = Process.Start(aria2c + " ","-x 16 -d " + T_Download + " " + "-q" + " " + "https://github.moeyy.xyz/https://raw.githubusercontent.com/Rainbow-SPY/GoldSource-Engine-ToolKit/resource/Version.ini");
 check.WaitForExit();
-Process info = Process.Start(@ToolKit_App + "/modules/aria2/aria2c.exe ", "-x 16 -d " + T_Download + " " + "-q" + " " + "https://github.moeyy.xyz/https://raw.githubusercontent.com/Rainbow-SPY/GoldSource-Engine-ToolKit-.NET/resource/info.ini");
+Process info = Process.Start(aria2c + " ", "-x 16 -d " + T_Download + " " + "-q" + " " + "https://github.moeyy.xyz/https://raw.githubusercontent.com/Rainbow-SPY/GoldSource-Engine-ToolKit-.NET/resource/info.ini");
 info.WaitForExit();
 static void DelectLog(string srcPath)
 {
@@ -280,7 +248,7 @@ var verAll = File.ReadAllText(ToolKit_App+"/Download/Version.ini");
 //{
 
 //}
-string vernow = "0.1";
+string vernow = "0.1";//目前的版本
 string FileToRead = ToolKit_App + "/Download/info.ini";
 // Creating enumerable object  
 IEnumerable<string> lined = File.ReadLines(FileToRead);
@@ -307,7 +275,6 @@ KeyJump2:
         if (keyInfo1.KeyChar == 'a')
         {
             Console.Clear();
-            Console.Clear();
             Console.Title = "Updating...";
             Console.WriteLine("===============================================================================");
             Console.WriteLine("                                GE 工具箱  - 更新 ");
@@ -318,7 +285,7 @@ KeyJump2:
             File.Delete(ToolKit_Data + "/ToolKit.Data.github.cdn-download.ini");
             File.Delete(ToolKit_Data + "/ToolKit.Data.github.cdn-download.cdn.ini");
             DelectLog(ToolKit_App + "/scripts");
-            Process p1 = Process.Start(@ToolKit_App + "/modules/aria2/aria2c.exe ", "-x 16 -d " + "\"" + ToolKit_App + "/scripts" + "\"" + " " + "-q https://update.greasyfork.org/scripts/412245/Github%20%E5%A2%9E%E5%BC%BA%20-%20%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD.user.js");
+            Process p1 = Process.Start(aria2c + " ", "-x 16 -d " + "\"" + ToolKit_App + "/scripts" + "\"" + " " + "-q https://update.greasyfork.org/scripts/412245/Github%20%E5%A2%9E%E5%BC%BA%20-%20%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD.user.js");
             p1.WaitForExit();
             Console.WriteLine("脚本更新完成.");
             Console.WriteLine();
@@ -327,8 +294,9 @@ KeyJump2:
             if (jsFiles1.Length > 0)
             {
                 string script3 = jsFiles1[0];
-                script3 = script3.Replace("\\", "/"); string input = File.ReadAllText(script3);
-                string[] urls = ExtractUrl(input);
+                script3 = script3.Replace("\\", "/");
+                string input = File.ReadAllText(script3);
+                string[] urls = ToolKit.ExtractUrl(input);
                 using StreamWriter writer = new(ToolKit_Data + "/ToolKit.Data.github.cdn-download.cdn.ini");
                 // 遍历数据集合，并写入文件
                 foreach (string line in urls)
@@ -353,27 +321,28 @@ KeyJump2:
                 writer.WriteLine("$ScriptLines=" + lineCount);
             }
             Console.WriteLine("正在下载资源包...(1/6)");
-            Process p2 = Process.Start(@ToolKit_App + "/modules/aria2/aria2c.exe ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn4 + "/" + DownloadLink1);
+            Process p2 = Process.Start(aria2c + " ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn4 + "/" + DownloadLink1);
             p2.WaitForExit();
             Console.WriteLine("正在下载资源包...(2/6)");
-            Process p3 = Process.Start(@ToolKit_App + "/modules/aria2/aria2c.exe ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn4 + "/" + DownloadLink2);
+            Process p3 = Process.Start(aria2c + " ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn4 + "/" + DownloadLink2);
             p3.WaitForExit();
             Console.WriteLine("正在下载资源包...(3/6)");
-            Process p4 = Process.Start(@ToolKit_App + "/modules/aria2/aria2c.exe ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn4 + "/" + DownloadLink3);
+            Process p4 = Process.Start(aria2c + " ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn4 + "/" + DownloadLink3);
             p4.WaitForExit();
             Console.WriteLine("正在下载资源包...(4/6)");
-            Process p5 = Process.Start(@ToolKit_App + "/modules/aria2/aria2c.exe ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn4 + "/" + DownloadLink4);
+            Process p5 = Process.Start(aria2c + " ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn4 + "/" + DownloadLink4);
             p5.WaitForExit();
             Console.WriteLine("正在下载资源包...(5/6)");
-            Process p6 = Process.Start(@ToolKit_App + "/modules/aria2/aria2c.exe ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn4 + "/" + DownloadLink5);
+            Process p6 = Process.Start(aria2c + " ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn4 + "/" + DownloadLink5);
             p6.WaitForExit();
             Console.WriteLine("正在下载资源包...(6/6)");
-            Process p7 = Process.Start(@ToolKit_App + "/modules/aria2/aria2c.exe ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn6 + "/" + DownloadLink6);
+            Process p7 = Process.Start(aria2c + " ", "-x 16 -d " + ToolKit_Download + " " + "-q" + " " + Downloadcdn6 + "/" + DownloadLink6);
             p7.WaitForExit();
             if (File.Exists(ToolKit_App + "/Download/resource-1.1.0-Offical.7z"))
             {
                 Console.WriteLine("更新完成");
                 Console.ReadKey();
+                ToolKit.WriteIniFile(ToolKit_Data + "/ToolKit.data.update.ini","ResUpdate","True");
                 Process[] process = Process.GetProcessesByName("aria2");
                 foreach (Process p in process)
                 {
@@ -389,6 +358,7 @@ KeyJump2:
                     p.Kill();
                 }
                 Console.WriteLine("更新失败");
+                Console.ReadKey();
                 goto Instruction;
             }
 
@@ -522,13 +492,13 @@ if (key != null)
         Console.WriteLine("您的Steam路径:\t\t" + SteamPath);
         Console.WriteLine("您的SteamApp路径:\t\t" + SteamPath + "/steam.exe");
         SteamApp = SteamPath + "/steam.exe";
-        WriteIniFile(ToolKit_App + "/data/ToolKit.Data.Steam.Path.ini", "$SteamPath", SteamPath);
-        WriteIniFile(ToolKit_App + "/data/ToolKit.Data.Steam.App.ini", "$SteamApp", SteamApp);
+        ToolKit.WriteIniFile(ToolKit_App + "/data/ToolKit.Data.Steam.Path.ini", "$SteamPath", SteamPath);
+        ToolKit.WriteIniFile(ToolKit_App + "/data/ToolKit.Data.Steam.App.ini", "$SteamApp", SteamApp);
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("您的Steam用户文件夹:	" + SteamPath + "/userdata");
         Console.ResetColor();
         SteamUserData = SteamPath + "/userdata";
-        WriteIniFile(ToolKit_App + "/data/ToolKit.Data.Steam.UserData.ini", "$SteamUserData", SteamUserData);
+        ToolKit.WriteIniFile(ToolKit_App + "/data/ToolKit.Data.Steam.UserData.ini", "$SteamUserData", SteamUserData);
 
     }
     else
@@ -543,50 +513,6 @@ if (key != null)
     }
     key.Close();
 }
-
-static string GetRegistryValue(string keyName, string valueName)
-{
-    string value = "";
-    using (var key = Registry.CurrentUser.OpenSubKey(keyName))
-    {
-        if (key != null)
-        {
-            value = key.GetValue(valueName) as string;
-        }
-    }
-    return value;
-}
-static void WriteIniFile(string filePath, string variable, string value)
-{
-    using StreamWriter writer = new(filePath);
-    writer.WriteLine($"{variable}={value}");
-}
-static string[] ExtractUrl(string input)
-{
-    Regex urlRegex = new Regex(@"\bhttps?:\/\/\S+\b", RegexOptions.IgnoreCase);
-    MatchCollection matches = urlRegex.Matches(input);
-
-    string[] urls = new string[matches.Count];
-    for (int i = 0; i < matches.Count; i++)
-    {
-        urls[i] = matches[i].Value;
-    }
-
-    return urls;
-}
-static int readFileLines(string path)  //这里的参数是txt所在路径
-{
-    int lines = 0;  //用来统计txt行数
-    FileStream fs = new(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
-    StreamReader sr = new(fs);
-    while (sr.ReadLine() != null)
-    {
-        lines++;
-    }
-    fs.Close();
-    sr.Close();
-    return lines;
-} 
 
 GetHalfLifeInto:
 Console.WriteLine();
@@ -629,7 +555,7 @@ else
     if (File.Exists(steamPath + "/steamapps/common/Half-Life/hl.exe"))
     {
         string HalfLifeApp = Path.Combine(steamPath + "/steamapps/common/Half-Life/hl.exe");
-        WriteIniFile(ToolKit_App + "/data/ToolKit.Data.Half-Life.App.ini", "$Half-Life-App", HalfLifeApp);
+        ToolKit.WriteIniFile(ToolKit_App + "/data/ToolKit.Data.Half-Life.App.ini", "$Half-Life-App", HalfLifeApp);
         Console.WriteLine("已找到游戏App:    " + HalfLifeApp);
     }
     else
@@ -668,7 +594,7 @@ else
     if (File.Exists(steamPath + "/steamapps/common/Half-Life/hl.exe"))
     {
         string HalfLifePath = Path.Combine(steamPath + "/steamapps/common/Half-Life");
-        WriteIniFile(ToolKit_App + "/data/ToolKit.Data.Half-Life.Path.ini", "$Half-Life-Path", HalfLifePath);
+        ToolKit.WriteIniFile(ToolKit_App + "/data/ToolKit.Data.Half-Life.Path.ini", "$Half-Life-Path", HalfLifePath);
         Console.WriteLine("已找到游戏路径:    " + HalfLifePath);
     }
     else
@@ -939,9 +865,9 @@ if (jsFiles.Length == 1)
 {
     string scriptPath = jsFiles[0];
     scriptPath = scriptPath.Replace("\\", "/");
-    WriteIniFile(ToolKit_Data + "/ToolKit.Data.github.cdn-download.Path.ini", "$ScriptPath", scriptPath);
+    ToolKit.WriteIniFile(ToolKit_Data + "/ToolKit.Data.github.cdn-download.Path.ini", "$ScriptPath", scriptPath);
 }
-WriteIniFile(ToolKit_Data + "/ToolKit.Data.github.cdn-download.name.ini", "$ScriptName", "Github Enhancement - High Speed Download");
+ToolKit.WriteIniFile(ToolKit_Data + "/ToolKit.Data.github.cdn-download.name.ini", "$ScriptName", "Github Enhancement - High Speed Download");
 string scriptPath1 = jsFiles[0];
 scriptPath1 = scriptPath1.Replace("\\", "/");
 foreach (string line in File.ReadLines(scriptPath1))
@@ -952,7 +878,7 @@ foreach (string line in File.ReadLines(scriptPath1))
         if (equalSignIndex4 != -1 && equalSignIndex4 < line.Length - 1)
         {
             string data = line[(equalSignIndex4 + 1)..];
-            WriteIniFile(ToolKit_Data + "/ToolKit.Data.github.cdn-download.version.ini", "$ScriptVersion", data);
+            ToolKit.WriteIniFile(ToolKit_Data + "/ToolKit.Data.github.cdn-download.version.ini", "$ScriptVersion", data);
         }
     }
 }
@@ -964,7 +890,7 @@ foreach (string line in File.ReadLines(scriptPath1))
         if (equalSignIndex4 != -1 && equalSignIndex4 < line.Length - 1)
         {
             string data = line[(equalSignIndex4 + 1)..];
-            WriteIniFile(ToolKit_Data + "/ToolKit.Data.github.cdn-download.author.ini", "$ScriptAuthor", data);
+            ToolKit.WriteIniFile(ToolKit_Data + "/ToolKit.Data.github.cdn-download.author.ini", "$ScriptAuthor", data);
         }
     }
 }
@@ -1048,3 +974,253 @@ foreach (string line in File.ReadLines(ToolKit_Data + "/ToolKit.Data.github.cdn-
         }
     }
 }
+MainMenu:
+Console.Title = "MainMenu - GoldSource Engine ToolKit ver " + verShort;
+Console.Clear();
+Console.WriteLine("===============================================================================");
+Console.WriteLine("                          GE 工具箱 - 主  菜  单");
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+Console.WriteLine("                             [1]   启动游戏");
+Console.WriteLine("");
+Console.WriteLine("                             [2]   汉化游戏");
+Console.WriteLine("");
+Console.WriteLine("                             [3]   反    馈");
+Console.WriteLine("");
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine("                             [4]   自定义键位(不可用 敬请期待)");
+Console.ResetColor();
+Console.WriteLine();
+Console.WriteLine("                             [5]   中英语言切换");
+Console.WriteLine("");
+Console.WriteLine("                             [6]   更换模型");
+Console.WriteLine("");
+Console.WriteLine("                             [7]   整合包");
+Console.WriteLine("");
+Console.WriteLine("                             [8]   更换背景");
+Console.WriteLine("");
+Console.WriteLine("                             [X]   退出");
+Console.WriteLine("");
+Console.WriteLine("===============================================================================");
+KeyJump3:
+ConsoleKeyInfo keyInfo2 = Console.ReadKey(intercept: true);
+if (keyInfo2.KeyChar == '1')
+{
+    goto ChooseGame;
+        }
+else
+{
+    if (keyInfo2.KeyChar == '2')
+    {
+        goto ChineseText;
+    }
+    if (keyInfo2.KeyChar == '3')
+    {
+        goto Report;
+}
+    //if (keyInfo2.KeyChar == '4')
+    //{
+
+    //}
+    if (keyInfo2.KeyChar == '5')
+    {
+        goto ChooseSoundLanguage;
+    }
+    if (keyInfo2.KeyChar == '6')
+    {
+        goto ChooseModels;
+    }
+    if (keyInfo2.KeyChar == '7')
+    {
+        goto AllInOnePack;
+    }
+    if (keyInfo2.KeyChar == '8')
+    {
+        goto Background;
+    }
+    if (keyInfo2.KeyChar == 'x')
+    {
+        Environment.Exit(0);
+    }
+    if (keyInfo2.KeyChar == 'X')
+    {
+        Environment.Exit(0);
+    }
+    else
+    {
+        goto KeyJump3;
+    }
+}
+ChooseGame:
+Console.Clear();
+Console.WriteLine("===============================================================================");
+Console.WriteLine("GE 工具箱 - 启动游戏");
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+Console.WriteLine("选择您游玩的游戏......Console.WriteLine.");
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("游玩Half-Life 和 Half-Life:Uplink      输入 [1]");
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("游玩Counter-Strike                     输入 [2]");
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+KeyJump4:
+ConsoleKeyInfo keyInfo4 = Console.ReadKey(intercept: true);
+if (keyInfo4.KeyChar == '1')
+{
+    goto HalfLifeConfig;
+}
+else
+{
+    if (keyInfo4.KeyChar == '2')
+    {
+        goto cstrikeConfig;
+    }
+    else
+    {
+        goto KeyJump4;
+    }
+}
+
+
+HalfLifeConfig:
+Console.Clear();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+Console.WriteLine("您已选择了游戏：Half-Life 和 Half-Life:Uplink");
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("请选择您要加载的启动项......");
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("[1] 更改视角晃动参数( 命令:sv_rollangle, 默认：启用, 等级:2)");
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("[2] 快速切枪( 命令:hud_fastswitch, 默认：禁用, 等级:0)");
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("[3] 不加载任何启动项, 直接启动游戏");
+Console.WriteLine();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+KeyJump5:
+ConsoleKeyInfo keyInfo5 = Console.ReadKey(intercept: true);
+if (keyInfo5.KeyChar == '1')
+{
+    goto Halflife_sv_rollangle;
+}
+else
+{
+    if (keyInfo5.KeyChar == '2')
+    {
+        goto HalfLife_hud_fastswitch;
+    }
+    if (keyInfo5.KeyChar == '3')
+    {
+        goto RunningandEND;
+    }
+    else
+    {
+        goto KeyJump5;
+    }
+}
+Halflife_sv_rollangle:
+Console.Clear();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+if (File.Exists(ToolKit_Data + "/ToolKit.Data.Half-Life-Path.ini"))
+{
+    string HalfLifePath = File.ReadAllText(ToolKit_Data + "/ToolKit.Data.Half-Life.Path.ini");
+    int equalSignIndex2 = HalfLifePath.IndexOf("＝");
+    Console.Write("已找到游戏路径:    " + HalfLifePath);
+    Console.WriteLine();
+}
+else
+{
+    string steamPath = File.ReadAllText(ToolKit_Data + "/ToolKit.Data.Steam.Path.ini");
+    int equalSignIndex = steamPath.IndexOf("=");// 提取等号后的数据
+    if (equalSignIndex != -1 && equalSignIndex < steamPath.Length - 1)
+    {
+        string data = steamPath[(equalSignIndex + 1)..];
+    }
+    foreach (string line in File.ReadLines(ToolKit_Data + "/ToolKit.Data.Steam.Path.ini"))
+    {
+        if (line.Contains("$SteamPath"))
+        {
+            int equalSignIndex4 = line.IndexOf("=");// 提取等号后的数据
+            if (equalSignIndex4 != -1 && equalSignIndex4 < line.Length - 1)
+            {
+                string data = line[(equalSignIndex4 + 1)..];
+                File.WriteAllText(ToolKit_App + "/temp/temp.ini", data);
+            }
+        }
+    }
+    steamPath = File.ReadAllText(ToolKit_App + "/temp/temp.ini");
+    if (File.Exists(steamPath + "/steamapps/common/Half-Life/hl.exe"))
+    {
+        string HalfLifeApp = Path.Combine(steamPath + "/steamapps/common/Half-Life/hl.exe");
+        ToolKit.WriteIniFile(ToolKit_App + "/data/ToolKit.Data.Half-Life.App.ini", "$Half-Life-App", HalfLifeApp);
+        Console.WriteLine("已找到游戏App:    " + HalfLifeApp);
+    }
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Error ! Could`t find hl.exe");
+        Console.ReadKey();
+        Environment.Exit(0);
+    }
+}
+
+HalfLife_hud_fastswitch:
+Console.Clear();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+
+RunningandEND:
+Console.Clear();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+
+cstrikeConfig:
+Console.Clear();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+Console.WriteLine("===============================================================================");
+Console.WriteLine();
+
+ChineseText:
+Console.Clear();
+Report:
+Console.Clear();
+ChooseSoundLanguage:
+Console.Clear();
+ChooseModels:
+Console.Clear();
+AllInOnePack:
+Console.Clear();
+Background:
+Console.Clear();
